@@ -1,4 +1,4 @@
-## Data-Augmentation for Bangla-English Code-Mixed Sentiment Analysis: Enhancing Cross Linguistic Contextual Understanding
+## Data-Augmentation for Bangla-English Code-Mixed Sentiment Analysis: Enhancing Cross-Linguistic Contextual Understanding
 
 This code is the official implementation of the following paper:
 * Mohammad Tareq, Md Fokhrul Islam, Swakshar Deb, Sejuti Rahman, Abdullah Al Mahmud, "[Data-augmentation for Bangla-English Code-Mixed Sentiment Analysis: Enhancing Cross Linguistic Contextual Understanding](https://ieeexplore.ieee.org/abstract/document/10129187)," in IEEE Access, 2023.
@@ -17,16 +17,23 @@ Figure 2: (a) Proposed data augmentation process with multiple sampling rates. F
 
 ## Running instructions
 
-To run the baseling model with our proposed data augmentation strategy run the main.py inside the **align** folder. You can select the word embedding method (Fastext, W2V) inside the main.py file. For example, in case of the Fastext embedding with our proposed data augmentation run this command in the terminal   
+To run the baseling model with our proposed data augmentation strategy, first, train the word embedding modeling such as Fastext or W2V. For example, to train the fastext word embedding with our proposed data augmentation, run this command
+```shell
+python align/fastext_align.py
+``` 
+This will save the word embedding model named as "saved_model_fastex_mask_banglish_supervised". Second, load this model to Conv1DLSTM.py and ml_method.py file to obtain the results for Con1DLSTM and other ML algorithms.
 
 ```shell
-python align/main.py --fastext
+python align/Conv1DLSTM.py
+python align/ml_method.py
 ``` 
 
-Similarly, to run the baseling model without the data augmentation strategy run the main.py inside the **non-align** folder. Run this command for the baseline performance with Fastext word embedding   
+Similarly, to run the baseling model without the data augmentation strategy follow this shell command
 
-```
-python non-align/main.py --fastext
+```shell
+python non-align/fastext_mono.py
+python non-align/Conv1DLSTM.py
+python non-align/ml_method.py 
 ```
 
 ## Citation
