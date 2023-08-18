@@ -34,7 +34,7 @@ If you use this code and the dataset for your research, please consider to cite 
 
 ```
 @article{tareq2023data,
-  title={Data-augmentation for Bangla-English     Code-Mixed Sentiment Analysis: Enhancing Cross Linguistic Contextual Understanding},
+  title={Data-augmentation for Bangla-English Code-Mixed Sentiment Analysis: Enhancing Cross Linguistic Contextual Understanding},
   author={Tareq, Mohammad and Islam, Md Fokhrul and Deb, Swakshar and Rahman, Sejuti and Al Mahmud, Abdullah},
   journal={IEEE Access},
   year={2023},
